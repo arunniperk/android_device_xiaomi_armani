@@ -1,7 +1,7 @@
 From d835a66c49fd236ad281344841fdebb0bf2416ab Mon Sep 17 00:00:00 2001
 From: fefifofum <fefifofum@email.com>
 Date: Mon, 6 Apr 2015 23:20:49 +0200
-Subject: [PATCH] Fix TWRP in cm-12.0
+Subject: [PATCH] Fix TWRP in cm-12.1
 
 ---
  recovery.te | 3 +++
