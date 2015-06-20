@@ -22,23 +22,25 @@ const char *mr_init_devices[] =
     "/sys/module/mmc_core",
     "/sys/module/mmcblk",
 
-    // sdcard
+	// sdcard
     "/sys/block/mmcblk1",
     "/sys/devices/msm_sdcc.2/mmc_host*",
-    
-    // for adb
+
     "/sys/devices/gpio_keys.66/input*",
     "/sys/class/input/event4",
     "/sys/devices/virtual/input*",
     "/sys/devices/virtual/misc/uinput",
-	"/sys/class/misc/uinput",
+    "/sys/class/misc/uinput",
+    "/sys/devices/f9927000.i2c/i2c-5/5-0038/input*",
+
+	// for adb
     "/sys/devices/virtual/tty/ptmx",
     "/sys/devices/virtual/misc/android_adb",
     "/sys/devices/virtual/android_usb/android0/f_adb",
     "/sys/bus/usb",
 
-    // USB drive is in here
-    "/sys/module/ehci_hcd*",
+	// USB drive is in here
+    "/sys/devices/platform/msm_hsusb_host*",
 
     NULL
 };
