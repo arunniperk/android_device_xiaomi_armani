@@ -66,6 +66,6 @@ MR_INIT_DEVICES := device/xiaomi/armani/mr_init_devices.c
 MR_DPI := hdpi
 MR_DPI_FONT := 216
 MR_FSTAB := device/xiaomi/armani/recovery.fstab
-MR_KEXEC_MEM_MIN := 0x08250000
+MR_KEXEC_MEM_MIN := 0x05000000
 MR_KEXEC_DTB := true
 MR_CONTINUOUS_FB_UPDATE := true
