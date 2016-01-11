@@ -59,11 +59,12 @@ RECOVERY_GRAPHICS_USE_LINELENGTH := true
 BOARD_SUPPRESS_SECURE_ERASE := true
 
 #MultiROM config. MultiROM also uses parts of TWRP config
-MR_INPUT_TYPE := type_b
-MR_INIT_DEVICES := device/xiaomi/armani/mr_init_devices.c
 MR_DPI := hdpi
 MR_DPI_FONT := 216
-MR_FSTAB := device/xiaomi/armani/recovery.fstab
+MR_FSTAB := device/xiaomi/armani/multirom/mrom.fstab
+MR_INIT_DEVICES := device/xiaomi/armani/multirom/mr_init_devices.c
+MR_INPUT_TYPE := type_b
 MR_KEXEC_MEM_MIN := 0x25000000
 MR_KEXEC_DTB := true
+MR_USE_MROM_FSTAB := true
 MR_CONTINUOUS_FB_UPDATE := true
