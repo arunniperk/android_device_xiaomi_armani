@@ -36,30 +36,23 @@ BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --dt device/xiaomi/armani/dt.img --kernel_offset 0x00008000 --ramdisk_offset 0x02000000 --tags_offset 0x01e00000
 BOARD_CUSTOM_BOOTIMG_MK := device/xiaomi/armani/mkbootimg.mk
 
-# USB Mounting
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun0/file
-
 # Recovery
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 BOARD_HAS_LARGE_FILESYSTEM := true
-TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 
 # TWRP-Specific
-TW_THEME := portrait_hdpi
-RECOVERY_SDCARD_ON_DATA := true
-TW_INCLUDE_CRYPTO := true
-TW_INTERNAL_STORAGE_PATH := "/data/media"
-TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
-TW_EXTERNAL_STORAGE_PATH := "/external_sd"
-TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
-TW_DEFAULT_EXTERNAL_STORAGE := true
-TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
-RECOVERY_GRAPHICS_USE_LINELENGTH := true
+DEVICE_RESOLUTION := 768x1280
 BOARD_SUPPRESS_SECURE_ERASE := true
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_QCOM_RTC_FIX := true
+TW_INCLUDE_CRYPTO := true
+TW_DEFAULT_EXTERNAL_STORAGE := true
+TW_THEME := portrait_hdpi
 
 #MultiROM config. MultiROM also uses parts of TWRP config
+MR_CONTINUOUS_FB_UPDATE := true
 MR_DPI := hdpi
 MR_DPI_FONT := 216
 MR_FSTAB := device/xiaomi/armani/multirom/mrom.fstab
@@ -67,6 +60,6 @@ MR_INIT_DEVICES := device/xiaomi/armani/multirom/mr_init_devices.c
 MR_INPUT_TYPE := type_b
 MR_KEXEC_MEM_MIN := 0x25000000
 MR_KEXEC_DTB := true
+MR_PIXEL_FORMAT := "RGBX_8888"
 MR_USE_MROM_FSTAB := true
-MR_CONTINUOUS_FB_UPDATE := true
 TARGET_RECOVERY_IS_MULTIROM := true
